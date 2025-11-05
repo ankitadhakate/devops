@@ -1,0 +1,45 @@
+# Local .terraform directories
+**/.terraform/*
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude override files as they are usually local
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Include override.example files if you want to share them
+# !override.example.tf
+
+# Terraform variable files with secrets
+*.tfvars
+*.tfvars.json
+
+# Terraform plan output
+*.plan
+*.tfplan
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Sensitive environment variable files
+.env
+.env.*
+
+# IDE/editor specific files
+.vscode/
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+.terraform/providers/registry.terraform.io/hashicorp/google/5.45.2/darwin_arm64/terraform-provider-google_v5.45.2_x5
