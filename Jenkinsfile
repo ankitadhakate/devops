@@ -8,6 +8,11 @@ pipeline {
   }
 
   stages {
+    stage('Debug PATH') {
+      steps {
+        sh 'echo $PATH'
+      }
+    }
     stage('Checkout & Terraform Deploy') {
       steps {
         echo "Listing workspace files..."
