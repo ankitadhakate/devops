@@ -32,7 +32,7 @@ pipeline {
           terraform plan \
             -var="project_id=$PROJECT_ID" \
             -var="region=$REGION" \
-            -var="gcp-terraform-key=$GOOGLE_APPLICATION_CREDENTIALS" \
+            -var="credentials_file=$GOOGLE_APPLICATION_CREDENTIALS" \
             -out=tfplan.out
         '''
 
