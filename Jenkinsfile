@@ -11,7 +11,14 @@ pipeline {
   stages {
     stage('Checkout & Terraform Deploy') {
       steps {
-        dir('terraform') {    // ✅ Ensure all Terraform commands run in the same folder
+        dir('terraform') {
+          echo "🔐 Authenticating to Google Cloud..."
+          sh '''
+            gcloud auth activate-service-account --key-file="$GOOGLE_APPLICATION_CREDENTIALS"
+            gcloud config set project $PROJECT_ID
+            gcloud config set compute/region $REGION
+          '''
+
           echo "🚀 Initializing Terraform..."
           sh 'terraform init -input=false'
 
